@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/users"
+        android:icon="@drawable/ic_users"
+        android:title="@string/title_users" />
+
+    <item
+        android:id="@+id/shapes"
+        android:icon="@drawable/ic_shapes"
+        android:title="@string/title_shapes" />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/title_notifications" />
+
+</menu>

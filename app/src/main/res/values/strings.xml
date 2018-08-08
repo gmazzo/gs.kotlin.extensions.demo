@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="es">
+    <string name="app_name">Koltin Test</string>
+    <string name="title_users">Users</string>
+    <string name="title_shapes">Shapes</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="err_field_required">Este campo es requerido</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_profession">Profesión</string>
+    <string name="label_age">Edad</string>
+</resources>
