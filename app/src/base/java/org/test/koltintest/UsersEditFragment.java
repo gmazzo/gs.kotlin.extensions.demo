@@ -1,7 +1,6 @@
 package org.test.koltintest;
 
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
@@ -81,16 +80,13 @@ public class UsersEditFragment extends Fragment {
     }
 
     private boolean validate() {
-        boolean result = validate(R.id.name, true);
-        result &= validate(R.id.profession, result);
+        boolean result = validate(getView().findViewById(R.id.name), true);
+        result &= validate(getView().findViewById(R.id.profession), result);
         return result;
     }
 
-    private boolean validate(@IdRes int inputId, boolean setFocus) {
-        TextInputLayout layout = getView().findViewById(inputId);
-        CharSequence value = layout.getEditText().getText();
-
-        if (TextUtils.isEmpty(value)) {
+    private boolean validate(TextInputLayout layout, boolean setFocus) {
+        if (TextUtils.isEmpty(layout.getEditText().getText())) {
             layout.setError(getText(R.string.err_field_required));
 
             if (setFocus) {
