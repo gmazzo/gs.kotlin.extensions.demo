@@ -10,10 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class ShapeFragment extends Fragment {
-    private static final int LAYOUTS[] = {
+    private final int layouts[] = {
             R.layout.fragment_first,
             R.layout.fragment_second,
-            R.layout.fragment_third};
+            R.layout.fragment_third
+    };
 
     private static final String ARG_INDEX = "index";
 
@@ -34,7 +35,7 @@ public class ShapeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         int index = getArguments().getInt(ARG_INDEX); // TODO código duplicado
-        return inflater.inflate(LAYOUTS[index] /* */, container, false);
+        return inflater.inflate(layouts[index] /* */, container, false);
     }
 
     @Override
@@ -43,9 +44,9 @@ public class ShapeFragment extends Fragment {
 
         view.setOnClickListener($ -> {
             int index = getArguments().getInt(ARG_INDEX); // TODO código duplicado
-            int nextIndex = (index + 1) % LAYOUTS.length;
+            int nextIndex = (index + 1) % layouts.length;
             String tag = "shape" + index;
-            
+
             getFragmentManager().popBackStack(tag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             getFragmentManager().beginTransaction() // TODO podría hacerse genérico
                     .replace(getId(), ShapeFragment.create(nextIndex))

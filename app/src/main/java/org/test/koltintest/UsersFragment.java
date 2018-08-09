@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import org.test.koltintest.model.User;
 
+import kotlin.Unit;
+
 public class UsersFragment extends Fragment {
 
     public static UsersFragment create() {
@@ -45,14 +47,14 @@ public class UsersFragment extends Fragment {
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
 
         inflater.inflate(R.menu.fragment_users, menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.add:
                 getFragmentManager().beginTransaction() // TODO podría hacerse genérico

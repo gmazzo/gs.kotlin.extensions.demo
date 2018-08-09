@@ -11,14 +11,6 @@ android {
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
     }
-    buildTypes {
-        base {
-            initWith debug
-        }
-        solution {
-            initWith debug
-        }
-    }
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8

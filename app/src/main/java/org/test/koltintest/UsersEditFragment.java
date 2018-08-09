@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -59,14 +60,14 @@ public class UsersEditFragment extends Fragment {
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
 
         inflater.inflate(R.menu.fragment_users_edit, menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.save:
                 if (validate()) {
@@ -86,7 +87,9 @@ public class UsersEditFragment extends Fragment {
     }
 
     private boolean validate(TextInputLayout layout, boolean setFocus) {
-        if (TextUtils.isEmpty(layout.getEditText().getText())) {
+        Editable value = layout.getEditText().getText();
+
+        if (TextUtils.isEmpty(value)) {
             layout.setError(getText(R.string.err_field_required));
 
             if (setFocus) {

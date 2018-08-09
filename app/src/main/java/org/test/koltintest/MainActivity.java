@@ -1,6 +1,7 @@
 package org.test.koltintest;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private boolean onNavigationItemSelected(MenuItem item) {
+    private boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show(); // TODO código duplicado
 
         Fragment newFragment = null;
