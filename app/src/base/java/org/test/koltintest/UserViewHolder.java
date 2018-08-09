@@ -1,6 +1,7 @@
 package org.test.koltintest;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
@@ -22,7 +23,7 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
         setText(itemView.findViewById(R.id.age), itemView.findViewById(R.id.ageLabel), Objects.toString(user.getAge(), null));
     }
 
-    private void setText(TextView value, TextView label, CharSequence text) {
+    private void setText(@NonNull TextView value, @NonNull TextView label, @Nullable CharSequence text) {
         value.setText(text);
         value.setVisibility(TextUtils.isEmpty(text) ? View.GONE : View.VISIBLE); // TODO this could be generic?
         label.setVisibility(value.getVisibility());
