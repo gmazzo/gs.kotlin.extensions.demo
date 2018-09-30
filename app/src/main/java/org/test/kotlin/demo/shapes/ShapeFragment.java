@@ -1,9 +1,11 @@
-package org.test.koltintest;
+package org.test.kotlin.demo.shapes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import org.test.kotlin.demo.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

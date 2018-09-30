@@ -1,10 +1,11 @@
-package org.test.koltintest;
+package org.test.kotlin.demo.users;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.test.koltintest.model.User;
+import org.test.kotlin.demo.R;
+import org.test.kotlin.demo.model.User;
 
 import java.util.function.Consumer;
 
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import static org.test.Utils.asDate;
 
-public class UsersAdapter extends RecyclerView.Adapter<UserViewHolder> {
+public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
     private final User users[] = {
             new User(1, "Guillermo Mazzola", "Software Developer", asDate("19/12/1985")),
             new User(2, "German Bravo Rojas", "Android Developer", null),
@@ -32,14 +33,14 @@ public class UsersAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UsersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_users_item, parent, false);
-        return new UserViewHolder(view);
+        return new UsersViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UsersViewHolder holder, int position) {
         User user = users[position];
 
         holder.bindUser(user);
@@ -47,7 +48,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UserViewHolder> {
     }
 
     @Override
-    public void onViewRecycled(@NonNull UserViewHolder holder) {
+    public void onViewRecycled(@NonNull UsersViewHolder holder) {
         super.onViewRecycled(holder);
 
         holder.itemView.setOnClickListener(null);

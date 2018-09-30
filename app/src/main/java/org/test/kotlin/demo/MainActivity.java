@@ -1,10 +1,13 @@
-package org.test.koltintest;
+package org.test.kotlin.demo;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.test.kotlin.demo.shapes.ShapeFragment;
+import org.test.kotlin.demo.users.UsersFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
