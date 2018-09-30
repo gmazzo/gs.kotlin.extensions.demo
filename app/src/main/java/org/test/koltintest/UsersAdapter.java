@@ -1,7 +1,5 @@
 package org.test.koltintest;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +7,9 @@ import android.view.ViewGroup;
 import org.test.koltintest.model.User;
 
 import java.util.function.Consumer;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import static org.test.Utils.asDate;
 

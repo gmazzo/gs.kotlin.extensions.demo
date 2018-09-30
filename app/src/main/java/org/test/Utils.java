@@ -1,12 +1,12 @@
 package org.test;
 
-import android.support.annotation.NonNull;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.annotation.NonNull;
 
 public final class Utils {
     private static DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
