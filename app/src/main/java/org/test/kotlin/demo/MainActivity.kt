@@ -1,9 +1,11 @@
-package org.test.koltintest
+package org.test.kotlin.demo
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.test.kotlin.demo.shapes.ShapeFragment
+import org.test.kotlin.demo.users.UsersFragment
 import org.test.toast
 
 class MainActivity : AppCompatActivity() {

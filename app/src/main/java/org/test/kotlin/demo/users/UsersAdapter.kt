@@ -1,10 +1,11 @@
-package org.test.koltintest
+package org.test.kotlin.demo.users
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import org.test.asDate
 import org.test.inflate
-import org.test.koltintest.model.User
+import org.test.kotlin.demo.R
+import org.test.kotlin.demo.model.User
 
 class UsersAdapter(private val selectionListener: (User) -> Unit) : RecyclerView.Adapter<UserViewHolder>() {
 

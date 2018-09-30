@@ -1,10 +1,10 @@
-package org.test.koltintest
+package org.test.kotlin.demo.users
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_users_item.view.*
-import org.test.koltintest.model.User
+import org.test.kotlin.demo.model.User
 import org.test.textOrHide
 
 class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {

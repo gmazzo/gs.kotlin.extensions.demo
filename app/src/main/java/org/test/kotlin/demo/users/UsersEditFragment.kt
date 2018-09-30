@@ -1,11 +1,12 @@
-package org.test.koltintest
+package org.test.kotlin.demo.users
 
 import android.os.Bundle
 import android.view.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_users_edit.*
-import org.test.koltintest.model.User
+import org.test.kotlin.demo.R
+import org.test.kotlin.demo.model.User
 import org.test.text
 import org.test.validate
 

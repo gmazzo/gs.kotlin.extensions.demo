@@ -11,8 +11,8 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
-import org.test.koltintest.BuildConfig
-import org.test.koltintest.R
+import org.test.kotlin.demo.BuildConfig
+import org.test.kotlin.demo.R
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
