@@ -52,9 +52,13 @@ public class UsersEditFragment extends Fragment {
             User user = getArguments().getParcelable(ARG_USER);
 
             if (user != null) {
-                view.<TextInputLayout>findViewById(R.id.name).getEditText().setText(user.getName());
-                view.<TextInputLayout>findViewById(R.id.profession).getEditText().setText(user.getProfession());
-                view.<TextInputLayout>findViewById(R.id.age).getEditText().setText(Objects.toString(user.getAge(), null));
+                TextInputLayout name = view.findViewById(R.id.name);
+                TextInputLayout profession = view.findViewById(R.id.profession);
+                TextInputLayout age = view.findViewById(R.id.age);
+
+                name.getEditText().setText(user.getName());
+                profession.getEditText().setText(user.getProfession());
+                age.getEditText().setText(Objects.toString(user.getAge(), null));
             }
         }
     }
@@ -81,8 +85,14 @@ public class UsersEditFragment extends Fragment {
     }
 
     private boolean validate() {
-        boolean result = validate(getView().findViewById(R.id.name), true);
-        result &= validate(getView().findViewById(R.id.profession), result);
+        View view = getView();
+        TextInputLayout name = view.findViewById(R.id.name);
+        TextInputLayout profession = view.findViewById(R.id.profession);
+        TextInputLayout age = view.findViewById(R.id.age);
+
+        boolean result = validate(name, true);
+        result &= validate(profession, result);
+        // result &= validate(age, result);
         return result;
     }
 

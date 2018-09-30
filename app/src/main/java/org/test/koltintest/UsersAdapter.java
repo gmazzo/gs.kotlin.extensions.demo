@@ -15,8 +15,8 @@ import static org.test.Utils.asDate;
 public class UsersAdapter extends RecyclerView.Adapter<UserViewHolder> {
     private final User users[] = {
             new User(1, "Guillermo Mazzola", "Software Developer", asDate("19/12/1985")),
-            new User(2, "Pablo Araya", "Android Developer", null),
-            new User(3, "Armando Picón", "Android Developer", null)
+            new User(2, "German Bravo Rojas", "Android Developer", null),
+            new User(3, "Konstantin Portnov", "iOS Developer", null)
     };
     private final Consumer<User> selectionListener;
 
