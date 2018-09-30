@@ -1,10 +1,11 @@
-package org.test.koltintest;
+package org.test.kotlin.demo.users;
 
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
-import org.test.koltintest.model.User;
+import org.test.kotlin.demo.R;
+import org.test.kotlin.demo.model.User;
 
 import java.util.Objects;
 
@@ -12,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class UserViewHolder extends RecyclerView.ViewHolder {
+public class UsersViewHolder extends RecyclerView.ViewHolder {
     private final TextView name;
     private final TextView nameLabel;
     private final TextView profession;
@@ -20,7 +21,7 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
     private final TextView age;
     private final TextView ageLabel;
 
-    public UserViewHolder(@NonNull View view) {
+    public UsersViewHolder(@NonNull View view) {
         super(view);
 
         this.name = itemView.findViewById(R.id.name);

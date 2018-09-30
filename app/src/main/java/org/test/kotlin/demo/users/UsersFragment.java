@@ -1,4 +1,4 @@
-package org.test.koltintest;
+package org.test.kotlin.demo.users;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,7 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.test.koltintest.model.User;
+import org.test.kotlin.demo.R;
+import org.test.kotlin.demo.model.User;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

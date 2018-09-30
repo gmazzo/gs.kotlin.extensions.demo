@@ -1,4 +1,4 @@
-package org.test.koltintest.model;
+package org.test.kotlin.demo.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

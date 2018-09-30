@@ -1,4 +1,4 @@
-package org.test.koltintest;
+package org.test.kotlin.demo.users;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,7 +12,8 @@ import android.view.ViewGroup;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-import org.test.koltintest.model.User;
+import org.test.kotlin.demo.R;
+import org.test.kotlin.demo.model.User;
 
 import java.util.Objects;
 
